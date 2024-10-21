@@ -26,10 +26,12 @@ class Stack {
 
 
 	public function top() {
+		// Check if stack is empty
 		if(empty($this->_stack)){
-            return null;
+            return null; // Return null for empty stack
         }
 
+		// Return the last element (top) of the stack without removing it
         return end($this->_stack);
 	}
 }
