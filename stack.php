@@ -34,6 +34,15 @@ class Stack {
 		// Return the last element (top) of the stack without removing it
         return end($this->_stack);
 	}
+
+	function search($value){
+		// Check $value in the array
+		if(in_array($value , $this->_stack)){
+			echo "\nFound :" . $value ;
+		}else{
+			echo "\nCan't Found array";
+		}
+	}
 }
 
 
@@ -52,4 +61,8 @@ for ($i = 1; $i <= 20; ++$i) {
 // 	echo $val . "\n";
 // }
 
-echo $s1->top();
+// Get the (top) last element in the array (_stack)
+echo "Top value in array :" . $s1->top();
+
+// Search the Item in a array
+$s1->search(8);
