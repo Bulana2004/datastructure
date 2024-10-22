@@ -10,6 +10,16 @@ class Stack {
 		$this->_size = $size;
 	}
 
+	// Show the Array
+	function array_show(){
+		print_r($this->_stack);
+	}
+
+	// Show array as a string
+	function arrayShowAsString(){
+		echo "\n" . implode("," , $this->_stack);
+	}
+
 
 	public function push($n) {
 		if (count($this->_stack) >= $this->_size) {
@@ -38,11 +48,12 @@ class Stack {
 	function search($value){
 		// Check $value in the array
 		if(in_array($value , $this->_stack)){
-			echo "\nFound :" . $value ;
+			echo "\nFound :" . $value . "\n";
 		}else{
-			echo "\nCan't Found array";
+			echo "\nCan't Found array\n";
 		}
 	}
+
 }
 
 
@@ -65,4 +76,10 @@ for ($i = 1; $i <= 20; ++$i) {
 echo "Top value in array :" . $s1->top();
 
 // Search the Item in a array
-$s1->search(8);
+// $s1->search();
+
+// Show as a array
+// $s1->array_show();
+
+// Array show as string
+// $s1->arrayShowAsString();
