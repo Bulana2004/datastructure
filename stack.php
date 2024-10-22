@@ -11,12 +11,12 @@ class Stack {
 	}
 
 	// Show the Array
-	function array_show(){
+	public function array_show(){
 		print_r($this->_stack);
 	}
 
 	// Show array as a string
-	function arrayShowAsString(){
+	public function arrayShowAsString(){
 		echo "\n" . implode("," , $this->_stack);
 	}
 
@@ -45,7 +45,7 @@ class Stack {
         return end($this->_stack);
 	}
 
-	function search($value){
+	public function search($value){
 		// Check $value in the array
 		if(in_array($value , $this->_stack)){
 			echo "\nFound :" . $value . "\n";
